@@ -1,0 +1,119 @@
+/* Simple.css supplies the base styles; these rules adapt it to the console. */
+:root {
+  --sans-font: 'Segoe UI', system-ui, sans-serif;
+  --accent: #3269a8;
+  --accent-hover: #285889;
+  --accent-text: white;
+}
+
+body {
+  font-size: 14px;
+  grid-template-columns: 1fr min(58rem, 94%) 1fr;
+}
+
+body > header {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  background: var(--bg);
+}
+
+body > header h1 {
+  font-size: 20px;
+  margin: 0 auto 0 0;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 1.5rem 0 0.75rem;
+}
+
+/* Named groups have colored edges and a light tint in either theme. */
+#sensors-panel {
+  --panel-color: #268575;
+}
+
+#controls-panel {
+  --panel-color: var(--accent);
+}
+
+#lab1b {
+  --panel-color: #b48632;
+}
+
+fieldset,
+#lab1b {
+  border-inline-start: 4px solid var(--panel-color);
+  background: color-mix(in srgb, var(--panel-color) 6%, var(--bg));
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  background: transparent;
+}
+
+th,
+td {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem;
+}
+
+td {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+button {
+  margin: 0.25rem;
+  touch-action: none;
+  user-select: none;
+}
+
+button.active {
+  outline: 2px solid var(--text);
+}
+
+#stop {
+  background: #a62020;
+  border-color: #a62020;
+  color: white;
+}
+
+#controls {
+  text-align: center;
+}
+
+#controls button {
+  min-width: 6rem;
+}
+
+#error {
+  border: 2px solid #a62020;
+  padding: 0.5rem;
+}
+
+.lab1b-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+img,
+canvas {
+  width: 100%;
+  background: #13202f;
+}

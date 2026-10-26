@@ -1,0 +1,13 @@
+{
+  "name": "cs437-picar-lab-console",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electron Wi-Fi remote control and telemetry for CS437",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^44.9.1"
+  }
+}

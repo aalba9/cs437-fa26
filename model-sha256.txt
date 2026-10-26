@@ -1,0 +1,2 @@
+3438ee45f33153b1fe6c49e18bcd869ce7c94ef01c485d4eb027eaf8fc0db8ac  models/detect.tflite
+dc183f003fc753c4c43fae6fdf7f387559449573f13fa32e517fb7453fd380f1  models/labels.txt

@@ -1,0 +1,41 @@
+{
+  "speed": 10,
+  "speed_cm_s": 23.6321168,
+  "turn_speed_ratio": 0.88,
+  "wheelbase_cm": 10.0,
+  "steering_gain": 0.704,
+  "steering_sign": -1,
+  "pan_sign": -1,
+  "sensor_offset_cm": 10.0,
+  "radius_cm": 17.0,
+  "stop_distance_cm": 15.0,
+  "scan_max_cm": 60.0,
+  "grid_cm": 5.0,
+  "bounds": [
+    -50,
+    230,
+    -140,
+    110
+  ],
+  "goal_left": [
+    158.75,
+    43.18
+  ],
+  "goal_right": [
+    177.8,
+    -73.66
+  ],
+  "segment_cm": 8.0,
+  "goal_tolerance_cm": 6.0,
+  "detection_threshold": 0.55,
+  "stop_seconds": 3.0,
+  "calibrated": true,
+  "steering_trim_deg": -3.3,
+  "front_bumper_offset_cm": 16.51,
+  "startup_delay_s": 0.0133356,
+  "body_width_cm": 14.605,
+  "rear_overhang_cm": 7.62,
+  "clearance_cm": 2.0,
+  "obstacle_cost_weight": 1.5,
+  "obstacle_memory_scans": 4
+}

@@ -1,0 +1,6 @@
+numpy>=1.24,<2
+opencv-python-headless==4.11.0.86
+ai-edge-litert==2.3.0
+astar==0.99
+scipy==1.15.3
+Flask>=2.2,<4

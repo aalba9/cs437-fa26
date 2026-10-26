@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PiCar-X control</title>
+    <link rel="stylesheet" href="vendor/simple.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>PiCar-X control</h1>
+      <p id="connection" role="status">Connecting…</p>
+      <button id="stop">Stop (Space)</button>
+    </header>
+
+    <main>
+      <fieldset id="sensors-panel">
+        <legend>Sensors</legend>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">Front distance</th>
+              <td id="distance">—</td>
+            </tr>
+            <tr>
+              <th scope="row">Pi temperature</th>
+              <td id="temp">—</td>
+            </tr>
+            <tr>
+              <th scope="row">Grayscale (left, center, right)</th>
+              <td id="grayscale">—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="reason"></p>
+        <p id="error" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset id="controls-panel">
+        <legend>Controls</legend>
+        <p>Hold a button, W/A/S/D, or an arrow key. Release to stop.</p>
+        <div id="controls">
+          <button data-direction="1" data-steer="0">Forward</button>
+          <div>
+            <button data-direction="1" data-steer="30">Left</button>
+            <button data-direction="-1" data-steer="0">Reverse</button>
+            <button data-direction="1" data-steer="-30">Right</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <details id="lab1b">
+        <summary>Lab 1b navigation</summary>
+        <p>
+          Return the car to its marked start, facing forward, before resetting.
+        </p>
+        <p>
+          Destination buttons start navigation using the rear-axle coordinates
+          saved on the Pi.
+        </p>
+        <button id="reset">Reset origin and map</button>
+        <button id="scan">Scan only</button>
+        <button id="leftGoal" disabled>Navigate to left X</button>
+        <button id="rightGoal" disabled>Navigate to right X</button>
+        <p>Navigation: <span id="navState">—</span></p>
+        <p id="pose"></p>
+
+        <div class="lab1b-grid">
+          <div>
+            <h2>Camera</h2>
+            <img id="camera" alt="Live camera from the Pi" />
+            <p id="fps"></p>
+            <p id="detections">Waiting for detector</p>
+          </div>
+          <div>
+            <h2>Sonar map</h2>
+            <canvas
+              id="map"
+              width="650"
+              height="580"
+              aria-label="Estimated sonar obstacles, route, destination and car position"
+            ></canvas>
+            <p>
+              Pink is obstacles, dark red is clearance, green is route, yellow X is destination.
+            </p>
+          </div>
+        </div>
+      </details>
+    </main>
+  </body>
+</html>

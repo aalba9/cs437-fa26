@@ -1,0 +1,9 @@
+Simple.css
+Project: https://simplecss.org/
+Source: https://github.com/kevquirk/simple.css
+Pinned commit: b6eab64c47692afd18c50bab0d5e656fd51d1695
+Files: simple.css and LICENSE-simple.css.txt (upstream LICENSE)
+License: MIT; see LICENSE-simple.css.txt.
+
+The unmodified, unminified stylesheet is served locally by Flask at /vendor/simple.css.
+It requires no CDN connection or JavaScript. Custom console rules are in ../style.css.

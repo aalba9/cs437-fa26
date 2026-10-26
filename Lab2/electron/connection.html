@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PiCar-X connection</title>
+    <link rel="stylesheet" href="vendor/simple.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Waiting for the Pi console</h1>
+      <p>
+        The console needs the Pi to be powered on, connected to Wi-Fi, and
+        running the lab server.
+      </p>
+      <p>Server: <code id="server"></code></p>
+      <p>
+        Once it is ready, <a id="retry" class="button">retry the connection</a>.
+      </p>
+      <p>To start the server from PowerShell:</p>
+      <pre>
+ssh ali@picarx 'cd /home/ali/cs437 &amp;&amp; .venv/bin/python tools/pi_service.py start'</pre
+      >
+    </main>
+    <script>
+      const target = new URLSearchParams(location.search).get('target');
+      document.getElementById('server').textContent = target;
+      document.getElementById('retry').href = target;
+    </script>
+  </body>
+</html>
